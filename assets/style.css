@@ -8,10 +8,11 @@ body {
   width: 2vmax;
   height: 2.5vmax;
   margin-right: 0.1rem;
+  margin-left: 0.5rem;
 }
 
 header {
-  color: aliceblue;
+  color: rgb(255, 255, 255);
   background-color: #000;
   display: flex;
   position: fixed;
@@ -21,20 +22,14 @@ header {
   align-items: center;
   padding: 0 0;
   margin: 0 0;
-  height: 1.6rem;
+  height: 3rem;
 }
 h3 a {
-  color: aliceblue;
+  color: rgb(255, 255, 255);
   display: flex;
   font-size: 0.6rem;
   align-items: center;
   margin: 0 0;
-}
-
-ul.top-list {
-  display: flex;
-  justify-content: space-around;
-  font-size: 0.5rem;
 }
 
 li {
@@ -42,12 +37,87 @@ li {
   margin: 0 0.4rem;
   text-transform: uppercase;
 }
-.top-links {
-  color: inherit;
-  text-decoration: none;
+
+.gnavi__wrap {
+  width: 50%;
+  margin: 0 auto;
+}
+.gnavi__lists {
+  display: flex;
+}
+.gnavi__list {
+  width: 20%;
+  position: relative;
+  transition: all 0.3s;
 }
 
-.top-links {
+.gnavi__list:hover::before {
+  background-color: #0071bb;
+}
+.gnavi__list a {
+  padding-bottom: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+  height: 100%;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.5rem;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.gnavi__list:hover a {
+  color: #fff;
+}
+.dropdown__lists {
+  display: none;
+  width: 100%;
+  position: absolute;
+  /* top: 60px; */
+  left: 0;
+  padding: 0 0;
+  margin: 0 0;
+  /* padding-top: 0.2rem; */
+}
+.gnavi__list:hover .dropdown__lists {
+  display: block;
+}
+.dropdown__list {
+  background-color: #021d2f;
+  width: 200%;
+  height: 1rem;
+  transition: all 0.3s;
+  position: relative;
+  padding: 0 0;
+  margin: 0 0;
+}
+
+.dropdown__list:hover {
+  background-color: #003558;
+}
+.dropdown__list a {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  margin-left: 0.3rem;
+}
+.dropdown__list a::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  transform: rotate(135deg);
+  position: absolute;
+  right: 15px;
+  top: calc(50% - 5px);
+}
+
+.gnavi__list {
   background: linear-gradient(
       to right,
       rgba(100, 200, 200, 0.586),
@@ -65,12 +135,12 @@ li {
   transition: background-size 400ms;
 }
 
-.top-links:hover {
+.gnavi__list:hover {
   background-size: 0 3px, 100% 3px;
 }
 
 .fixed-bg {
-  background-image: url(/assets/inside-of-bar.jpg);
+  background-image: url(/assets/img/inside-of-bar.jpg);
   min-height: 100%;
   background-size: cover;
   -webkit-background-size: cover !important;
@@ -91,11 +161,10 @@ html,
 main {
   height: 100%;
   margin: auto 0;
-  font-family: "Raleway", "Microsoft JhengHei";
 }
 
 .fixed-bg {
-  min-height: 100%;
+  min-height: auto;
   background-size: cover;
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
@@ -111,14 +180,24 @@ main {
   line-height: 1.5;
 }
 
-h1 {
+h1.text-bar-name {
   text-align: center;
-  font-size: 3em;
+  font-size: 10em;
   color: rgba(255, 255, 255, 1);
   text-shadow: 1px 1px 10px #000, 5px 5px 20px #000, 1px 0px 20px #def;
 }
 h2 {
+  border: 1px solid brown;
+  margin: 0;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  height: auto;
+}
+h3 {
   border: 1px solid #000;
+  font-size: 1rem;
+
   margin: 0 0;
   padding: 0 0;
 }
@@ -126,7 +205,7 @@ img {
   width: 100%;
   height: auto;
 }
-.text-bar {
+.fixed-bg p.text-bar {
   color: #fff;
   font-size: 1em;
   line-height: 0px;
@@ -145,17 +224,18 @@ img {
 }
 .text-box {
   background: rgba(255, 255, 255, 0.95);
-  padding: 20px;
-  margin: 0;
-  max-width: 500px;
+  padding: 10px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  max-width: 70%;
+  width: 100%;
+  border-radius: 8px;
 }
-.fixed-bg h2 {
-  font-size: 4em;
-}
+
 .fixed-bg p {
   text-align: center;
   max-width: 500px;
-  font-size: 1.2em;
+  font-size: 0.5em;
   text-align: left;
 }
 .top-img {
@@ -163,23 +243,38 @@ img {
   opacity: 0.5;
 }
 .bg-1 {
-  background-image: url("/assets/inside-of-bar.jpg");
+  min-height: 100%;
+  background-image: url("/assets/img/inside-of-bar.jpg");
 }
-.bg-1-1 {
-  background-image: url("https://images.unsplash.com/photo-1442406964439-e46ab8eff7c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+
+.bg-menu {
+  min-height: 100%;
+  background-image: url("/assets/img/cocktail.jpg");
 }
+
 .bg-2 {
-  background-image: url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-image: url("/assets/img/cocktails.jpg");
 }
-.bg-2-1 {
-  background-image: url("https://images.unsplash.com/photo-1521227439113-619913356230?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+
+.bg-whisky {
+  background-image: url("/assets/img/wisky-tals2.jpg");
 }
-.bg-3 {
-  background-image: url("https://images.unsplash.com/photo-1455165814004-1126a7199f9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+
+.bg-otherdrinks {
+  background-image: url("/assets/img/liquors2.jpg");
 }
-.bg-3-1 {
-  background-image: url("https://images.unsplash.com/photo-1532186773960-85649e5cb70b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80");
+.bg-food {
+  background-image: url("/assets/img/food3.jpg");
 }
-.bg-4 {
-  background-image: url("https://images.unsplash.com/photo-1496065187959-7f07b8353c55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+
+.bg-access {
+  background-image: url("/assets/img/accsess.jpg");
+}
+
+@media screen and (max-width: 550px) {
+  .logo a {
+    font-size: 1rem;
+  }
+  h1 {
+  }
 }
