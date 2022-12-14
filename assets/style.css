@@ -5,10 +5,19 @@
 body {
 }
 .top-logo {
-  width: 2vmax;
-  height: 2.5vmax;
-  margin-right: 0.1rem;
+  width: 2.3vmax;
+  height: 2.7vmax;
+  margin-right: 5px;
   margin-left: 0.5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.logo a {
+  text-align: center;
+  font-size: 1.5em;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 10px #000, 5px 5px 20px #000, 1px 0px 20px #def;
 }
 
 header {
@@ -22,7 +31,7 @@ header {
   align-items: center;
   padding: 0 0;
   margin: 0 0;
-  height: 3rem;
+  height: auto;
 }
 h3 a {
   color: rgb(255, 255, 255);
@@ -44,9 +53,9 @@ li {
 }
 .gnavi__lists {
   display: flex;
+  justify-content: space-around;
 }
 .gnavi__list {
-  width: 20%;
   position: relative;
   transition: all 0.3s;
 }
@@ -57,13 +66,13 @@ li {
 .gnavi__list a {
   padding-bottom: 3px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   /* width: 100%; */
   height: 100%;
   text-decoration: none;
   color: #ffffff;
-  font-size: 0.5rem;
+  font-size: 1em;
   letter-spacing: 0.05em;
   font-weight: 600;
   transition: all 0.3s;
@@ -73,21 +82,20 @@ li {
 }
 .dropdown__lists {
   display: none;
-  width: 100%;
+  width: max-content;
   position: absolute;
   /* top: 60px; */
   left: 0;
   padding: 0 0;
   margin: 0 0;
-  /* padding-top: 0.2rem; */
+  padding-top: 0.5em;
 }
 .gnavi__list:hover .dropdown__lists {
   display: block;
 }
 .dropdown__list {
   background-color: #021d2f;
-  width: 200%;
-  height: 1rem;
+  height: 2.7rem;
   transition: all 0.3s;
   position: relative;
   padding: 0 0;
@@ -104,7 +112,7 @@ li {
   color: #fff;
   text-decoration: none;
   position: relative;
-  margin-left: 0.3rem;
+  margin: 0 0.5em;
 }
 .dropdown__list a::before {
   content: "";
@@ -133,6 +141,7 @@ li {
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
   transition: background-size 400ms;
+  width: 100px;
 }
 
 .gnavi__list:hover {
@@ -180,7 +189,7 @@ main {
   line-height: 1.5;
 }
 
-h1.text-bar-name {
+h1 {
   text-align: center;
   font-size: 10em;
   color: rgba(255, 255, 255, 1);
@@ -205,17 +214,26 @@ img {
   width: 100%;
   height: auto;
 }
-.fixed-bg p.text-bar {
+.container.top {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  width: 90%;
+}
+p.text-bar {
   color: #fff;
-  font-size: 1em;
-  line-height: 0px;
-  margin-bottom: 2.5rem;
+  width: 100%;
+  text-align: center !important;
+  font-size: 1.5em !important;
+  line-height: 2em;
+  margin-bottom: 0;
   text-transform: uppercase;
 }
 .text-bar-name {
   margin-top: 0;
-  font-size: 4em;
-  line-height: 0px;
+  font-size: 10em;
+  line-height: 0.9em;
+  width: 100%;
 }
 .sub-text {
   color: #fff;
@@ -234,7 +252,7 @@ img {
 
 .fixed-bg p {
   text-align: center;
-  max-width: 500px;
+  /* max-width: 500px; */
   font-size: 0.5em;
   text-align: left;
 }
