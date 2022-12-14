@@ -8,7 +8,7 @@ body {
   width: 2.3vmax;
   height: 2.7vmax;
   margin-right: 5px;
-  margin-left: 0.5rem;
+  margin-left: 2rem;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -32,6 +32,23 @@ header {
   padding: 0 0;
   margin: 0 0;
   height: auto;
+}
+
+.top.bar-name a {
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  justify-content: center;
+}
+.bar-name-1 {
+  font-size: 0.1em;
+  padding: 0;
+  margin: 0;
+}
+.bar-name-2 {
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
 }
 h3 a {
   color: rgb(255, 255, 255);
@@ -128,8 +145,8 @@ li {
 .gnavi__list {
   background: linear-gradient(
       to right,
-      rgba(100, 200, 200, 0.586),
-      rgba(100, 200, 200, 0.583)
+      rgba(0, 0, 0, 0.586),
+      rgba(0, 0, 0, 0.583)
     ),
     linear-gradient(
       to right,
@@ -224,7 +241,7 @@ p.text-bar {
   color: #fff;
   width: 100%;
   text-align: center !important;
-  font-size: 1.5em !important;
+  font-size: 1.7em !important;
   line-height: 2em;
   margin-bottom: 0;
   text-transform: uppercase;
