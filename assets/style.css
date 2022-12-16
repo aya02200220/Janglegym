@@ -263,7 +263,7 @@ p.text-bar {
   text-transform: uppercase;
 }
 .text-bar-name {
-  margin-top: 0;
+  margin-top: 10px;
   font-size: 10em;
   line-height: 0.9em;
   width: 100%;
@@ -326,8 +326,8 @@ p.text-bar {
   .top-logo {
     width: 2.3vmax;
     height: 2.7vmax;
-    margin-right: 5px;
-    margin-left: 1rem;
+    margin-right: 2px;
+    margin-left: 0;
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -345,4 +345,9 @@ p.text-bar {
     font-size: 80%;
     margin-right: 10px;
   }
+  header {
+    height: 6%;
+  }
+
+  /*  */
 }
