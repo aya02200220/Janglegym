@@ -5,12 +5,12 @@
 body {
 }
 .top-logo {
-  width: 2.3vmax;
-  height: 2.7vmax;
-  margin-right: 5px;
+  width: 1.5rem;
+  height: 1.8rem;
+  /* margin-right: 5px;
   margin-left: 5rem;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 10px; */
 }
 
 .logo a {
@@ -20,47 +20,42 @@ body {
   text-shadow: 1px 1px 10px #000, 5px 5px 20px #000, 1px 0px 20px #def;
 }
 
-header {
-  color: rgb(255, 255, 255);
-  background-color: #000;
-  display: flex;
+header,
+.navbar {
   position: fixed;
   width: 100%;
-  /* border: 1px solid white; */
-  justify-content: space-around;
-  align-items: center;
-  padding: 0 0;
-  margin: 0 0;
-  height: auto;
+}
+.navbar-toggler-icon {
+  background-color: rgb(104, 96, 117);
+  border-radius: 3px;
 }
 
-.top.bar-name-1 {
+.top.bar-name {
   font-size: 20px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  width: 13em;
+  line-height: 1;
 }
 
-.top.bar-name-2 {
+.bar-name-set {
+  padding-left: 4px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  text-align: center;
 }
-.top.bar-name-2 a {
-  color: #fff;
-  display: flex;
-  text-decoration: none;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-}
+
 a.bar-name-1 {
-  /* font-size: 0.4em; */
+  color: #fff;
+  text-decoration: none;
   font-size: 45%;
   padding: 0;
   margin: 0;
 }
 a.bar-name-2 {
-  /* font-size: 0.8em; */
+  text-decoration: none;
+  color: #fff;
   font-size: 90%;
   padding: 0;
   margin: 0;
@@ -74,90 +69,66 @@ h3 a {
 }
 
 li {
-  list-style: none;
-  margin: 0 0.4rem;
   text-transform: uppercase;
-}
-
-.gnavi__wrap {
-  width: 50%;
-  margin: 0 auto;
-}
-.gnavi__lists {
-  display: flex;
-  justify-content: space-around;
-}
-.gnavi__list {
-  position: relative;
-  transition: all 0.3s;
-}
-
-.gnavi__list:hover::before {
-  background-color: #0071bb;
-}
-.gnavi__list a {
-  padding-bottom: 3px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* width: 100%; */
-  height: 100%;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 1em;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-  transition: all 0.3s;
-}
-.gnavi__list:hover a {
   color: #fff;
 }
+.navbar {
+  background-color: #000;
+}
+.navbar-toggler-icon {
+  background-color: white;
+}
+.nav-link {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+.nav-link a {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.navbar-nav {
+  text-transform: uppercase;
+  align-items: center;
+  text-align: center;
+}
+.navbar-expand-lg .navbar-collapse {
+  justify-content: center;
+}
+.dropdown-item {
+  /* display: flex; */
+  justify-content: center;
+  text-decoration: none;
+}
+.dropdown-item a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+a.nav-link.dropdown-toggle {
+  position: relative;
+  margin-left: 10px;
+}
+.toggle-parent {
+  position: relative;
+}
+
 .dropdown__lists {
-  display: none;
-  width: max-content;
   position: absolute;
-  /* top: 60px; */
-  left: 0;
-  padding: 0 0;
-  margin: 0 0;
-  padding-top: 0.5em;
+  left: 50%; /* ←ここ！ */
+  transform: translateX(-16%); /* ←ここ！ */
 }
-.gnavi__list:hover .dropdown__lists {
-  display: block;
+.dropdown-menu-dark {
+  text-align: center;
 }
-.dropdown__list {
-  background-color: #021d2f;
-  height: 2.7rem;
-  transition: all 0.3s;
-  position: relative;
-  padding: 0 0;
-  margin: 0 0;
-}
-
-.dropdown__list:hover {
-  background-color: #003558;
-}
-.dropdown__list a {
-  display: flex;
-  justify-content: left;
-  align-items: center;
+.nav-link {
   color: #fff;
-  text-decoration: none;
-  position: relative;
-  margin: 0 0.5em;
-}
-.dropdown__list a::before {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  transform: rotate(135deg);
-  position: absolute;
-  right: 15px;
-  top: calc(50% - 5px);
-}
+  justify-content: center;
 
-.gnavi__list {
   background: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.586),
@@ -176,7 +147,12 @@ li {
   width: 100px;
 }
 
-.gnavi__list:hover {
+a.nav-link:visited {
+  color: #fff;
+}
+
+a.nav-link:hover {
+  color: #fff;
   background-size: 0 3px, 100% 3px;
 }
 
@@ -243,7 +219,7 @@ h3 {
   margin: 0 0;
   padding: 0 0;
 }
-img {
+.text-img {
   width: 100%;
   height: auto;
 }
