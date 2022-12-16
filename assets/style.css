@@ -3,14 +3,12 @@
   text-decoration: none;
 }
 body {
+  background-color: #000;
 }
+
 .top-logo {
   width: 1.5rem;
   height: 1.8rem;
-  /* margin-right: 5px;
-  margin-left: 5rem;
-  margin-top: 10px;
-  margin-bottom: 10px; */
 }
 
 .logo a {
@@ -24,6 +22,11 @@ header,
 .navbar {
   position: fixed;
   width: 100%;
+  background-color: #000;
+}
+header {
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-toggler-icon {
@@ -96,7 +99,7 @@ li {
   text-align: left;
 }
 .navbar-expand-lg .navbar-collapse {
-  justify-content: center;
+  /* justify-content: center; */
 }
 .dropdown-item {
   /* display: flex; */
@@ -121,9 +124,6 @@ a.nav-link.dropdown-toggle {
 }
 .dropdown__lists {
   position: absolute;
-
-  /* left: 50%;
-  transform: translateX(-20%); */
 }
 .dropdown-menu-dark {
   list-style: square;
@@ -184,6 +184,10 @@ main {
   margin: auto 0;
 }
 
+main {
+  padding-top: 56px;
+}
+
 .fixed-bg {
   min-height: auto;
   background-size: cover;
@@ -208,7 +212,7 @@ h1 {
   text-shadow: 1px 1px 10px #000, 5px 5px 20px #000, 1px 0px 20px #def;
 }
 h2 {
-  border: 1px solid brown;
+  text-transform: uppercase;
   margin: 1.3rem 0;
   font-size: 3rem;
   color: #fff;
@@ -217,11 +221,18 @@ h2 {
   text-shadow: 1px 1px 10px #000, 5px 5px 20px #000, 1px 0px 20px #def;
 }
 h3 {
-  border: 1px solid #000;
-  font-size: 1rem;
-
+  font-size: 1.5em;
+  text-transform: uppercase;
   margin: 0 0;
   padding: 0 0;
+}
+.open-time p {
+  font-size: 1em !important;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  text-align: center;
+  justify-content: center;
 }
 .text-img {
   width: 100%;
@@ -255,7 +266,7 @@ p.text-bar {
 }
 .text-box {
   background: rgba(255, 255, 255, 0.95);
-  padding: 10px;
+  padding: 20px;
   margin-top: 0px;
   margin-bottom: 50px;
   max-width: 70%;
@@ -272,6 +283,12 @@ p.text-bar {
 .top-img {
   background: #fff 100%;
   opacity: 0.5;
+}
+
+.text-box ul,
+li {
+  color: #000;
+  text-transform: capitalize;
 }
 .bg-1 {
   width: 100vw;
@@ -308,16 +325,13 @@ p.text-bar {
   width: 100vw;
   background-image: url("/assets/img/accsess.jpg");
 }
+iframe {
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 20px;
+}
 
 @media screen and (max-width: 560px) {
-  /* .top-logo {
-    width: 2.3vmax;
-    height: 2.7vmax;
-    margin-right: 2px;
-    margin-left: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  } */
   .top.bar-name {
     width: auto;
   }
@@ -326,7 +340,7 @@ p.text-bar {
     padding: 0;
   }
   .text-bar-name {
-    font-size: 500%;
+    font-size: 400%;
   }
 
   header {
@@ -335,6 +349,36 @@ p.text-bar {
   .navbar-toggler {
     padding-right: 0;
   }
+  h2 {
+    font-size: 1.9em;
+  }
+  h3 {
+    font-size: 1em;
+    padding-left: 5px;
+    padding-top: 5px;
+  }
+  .text-box {
+    padding: 10px;
+  }
 
-  /*  */
+  .text-box ul {
+    padding-left: 20px;
+  }
+  .text-box ul,
+  li {
+    font-size: 0.8em;
+  }
+  .open-time p {
+    font-size: 0.5em !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    padding-left: 20px;
+    text-align: center;
+  }
+  .open-time {
+    padding-top: 5px;
+  }
+  .align-access {
+    text-align: center;
+  }
 }
