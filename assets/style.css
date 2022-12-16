@@ -25,8 +25,9 @@ header,
   position: fixed;
   width: 100%;
 }
+
 .navbar-toggler-icon {
-  background-color: rgb(104, 96, 117);
+  background-color: #5b6e81;
   border-radius: 3px;
 }
 
@@ -75,9 +76,7 @@ li {
 .navbar {
   background-color: #000;
 }
-.navbar-toggler-icon {
-  background-color: white;
-}
+
 .nav-link {
   display: flex;
   justify-content: center;
@@ -94,7 +93,7 @@ li {
 .navbar-nav {
   text-transform: uppercase;
   align-items: center;
-  text-align: center;
+  text-align: left;
 }
 .navbar-expand-lg .navbar-collapse {
   justify-content: center;
@@ -102,28 +101,33 @@ li {
 .dropdown-item {
   /* display: flex; */
   justify-content: center;
-  text-decoration: none;
 }
 .dropdown-item a {
   text-decoration: none;
+
   color: antiquewhite;
 }
 
 a.nav-link.dropdown-toggle {
   position: relative;
-  margin-left: 10px;
+  margin: auto;
 }
+
 .toggle-parent {
   position: relative;
 }
-
+.dropdown-menu {
+  list-style: square;
+}
 .dropdown__lists {
   position: absolute;
-  left: 50%; /* ←ここ！ */
-  transform: translateX(-16%); /* ←ここ！ */
+
+  /* left: 50%;
+  transform: translateX(-20%); */
 }
 .dropdown-menu-dark {
-  text-align: center;
+  list-style: square;
+  /* text-align: center; */
 }
 .nav-link {
   color: #fff;
@@ -270,59 +274,66 @@ p.text-bar {
   opacity: 0.5;
 }
 .bg-1 {
+  width: 100vw;
   min-height: 100%;
   background-image: url("/assets/img/inside-of-bar.jpg");
 }
 
 .bg-menu {
+  width: 100vw;
   min-height: 100%;
   background-image: url("/assets/img/cocktail.jpg");
 }
 
 .bg-2 {
+  width: 100vw;
   background-image: url("/assets/img/cocktails.jpg");
 }
 
 .bg-whisky {
+  width: 100vw;
   background-image: url("/assets/img/wisky-tals2.jpg");
 }
 
 .bg-otherdrinks {
+  width: 100vw;
   background-image: url("/assets/img/liquors2.jpg");
 }
 .bg-food {
+  width: 100vw;
   background-image: url("/assets/img/food3.jpg");
 }
 
 .bg-access {
+  width: 100vw;
   background-image: url("/assets/img/accsess.jpg");
 }
 
 @media screen and (max-width: 560px) {
-  .top-logo {
+  /* .top-logo {
     width: 2.3vmax;
     height: 2.7vmax;
     margin-right: 2px;
     margin-left: 0;
     margin-top: 10px;
     margin-bottom: 10px;
+  } */
+  .top.bar-name {
+    width: auto;
   }
+
   .top.bar-name {
     padding: 0;
-  }
-  .gnavi__wrap {
-    /* width: auto; */
-    margin: 0 0;
   }
   .text-bar-name {
     font-size: 500%;
   }
-  .gnavi__lists {
-    font-size: 80%;
-    margin-right: 10px;
-  }
+
   header {
     height: 6%;
+  }
+  .navbar-toggler {
+    padding-right: 0;
   }
 
   /*  */
